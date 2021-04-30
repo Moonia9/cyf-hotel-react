@@ -1,6 +1,7 @@
 import React from "react";
+import SearchButton from "./SearchButton";
 
-const Search = () => {
+const Search = properties => {
   return (
     <div className="search">
       <div className="page-header">
