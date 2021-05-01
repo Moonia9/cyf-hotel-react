@@ -1,8 +1,9 @@
 import React from "react";
+import "./App.css";
 
 const TouristInfoCards = properties => {
   return (
-    <div className="card mt-3 text-center">
+    <div className="card mt-5 mb-5 text-center">
       <div className="card">
         <img
           className="card-img-top img-responsive img-thumbnail"
@@ -10,9 +11,14 @@ const TouristInfoCards = properties => {
           alt="Card image cap"
         />
         <div className="card-body">
-          <button type="button" class="btn btn-outline-secondary bg-light">
-            <a href={properties.url}>Go to {properties.city_Name}</a>
-          </button>
+          <p>{properties.description}</p>
+          <a
+            target="_blank"
+            href={properties.url}
+            className="btn btn-outline-secondary bg-light"
+          >
+            Go to {properties.city_Name}
+          </a>
         </div>
       </div>
     </div>

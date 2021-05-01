@@ -2,13 +2,14 @@ import React from "react";
 
 const Heading = () => {
   return (
-    <div className="header">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light px-0 mr-10">
+    <div className="App-header">
+      <nav className="navbar">
         <img
+          className="App-logo"
           src="https://image.flaticon.com/icons/svg/139/139899.svg"
-          className="img-responsive ml-3 mr-3"
+          alt="logo"
         />
-        <h3>CYF Hotel</h3>
+        <h1>CYF Hotel</h1>
       </nav>
     </div>
   );

@@ -29,10 +29,3 @@ body {
   object-fit: cover;
   height: 250px;
 }
-
-@media screen and (orientation: landscape) {
-  .header img {
-    width: 2.65em;
-    height: 100%;
-  }
-}

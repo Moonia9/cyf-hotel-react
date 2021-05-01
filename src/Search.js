@@ -18,7 +18,7 @@ const Search = properties => {
                 className="form-control"
                 placeholder="Customer name"
               />
-              <button className="btn btn-primary">Search</button>
+              <SearchButton onSearch={properties.search} />
             </div>
           </form>
         </div>
