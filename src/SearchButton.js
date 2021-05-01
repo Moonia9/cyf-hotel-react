@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchButton = properties => {
   return (
-    <div className="search">
+    <div className="search mt-10">
       <div className="page-header">
         <h4 className="text-left">Search Bookings</h4>
       </div>
