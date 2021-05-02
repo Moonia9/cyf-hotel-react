@@ -17,7 +17,7 @@ const TouristInfoCards = properties => {
             href={properties.url}
             className="btn btn-outline-secondary bg-light"
           >
-            Go to {properties.city_Name}
+            Visit {properties.city_Name}
           </a>
         </div>
       </div>

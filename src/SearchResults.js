@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchResults = properties => {
   return (
-    <table class="table">
+    <table className="table">
       <thead>
         <tr>
           <th scope="col">First</th>
@@ -12,21 +12,24 @@ const SearchResults = properties => {
         </tr>
       </thead>
       <tbody>
-        {/* {properties.results.map((customer) => {
-          <tr>
-            <td>{customer.id}</td>
-            <td>{customer.title}</td>
-            <td>{customer.firstName}</td>
-            <td>{customer.surname}</td>
-            <td>{customer.email}</td>
-            <td>{customer.roomId}</td>
-            <td>{customer.checkInDate}</td>
-            <td>{customer.checkOutDate}</td>
-          </tr>;
-        })} */}
+        <tr>
+          <td>{properties.results.id}</td>
+          <td>{properties.results.title}</td>
+          <td>{properties.results.firstName}</td>
+          <td>{properties.results.surname}</td>
+          <td>{properties.results.email}</td>
+          <td>{properties.results.roomId}</td>
+          <td>{properties.results.checkInDate}</td>
+          <td>{properties.results.CheckOutDate}</td>
+        </tr>
       </tbody>
     </table>
   );
 };
 
+// function getDays(startDate, endDate) {
+//   var a = moment(startDate);
+//   var b = moment(endDate);
+//   a.diff(b)
+// }
 export default SearchResults;

@@ -22,14 +22,14 @@ const App = () => {
             img="https://culturezvous.com/wp-content/uploads/2020/01/manchester.jpg"
             url="https://www.visitmanchester.com/"
             city_Name="Manchester"
-            description="Manchester is the nucleus of the largest metropolitan area in the north of England, and it remains an important regional city, but it has lost the extraordinary vitality and unique influence that put it at the forefront of the Industrial Revolution."
+            description="Manchester is the nucleus of the largest metropolitan area in the north of England, and it remains an important regional city, but it has lost the extraordinary vitality and unique influence that put it at the forefront of the Industrial Revolution.Also the bands The Smiths, Joy Division, Oasis, Take That and many more."
           />
 
           <TouristInfoCards
             img="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ihLx.5gnaLfs/v1/-1x-1.jpg"
             url="https://www.visitlondon.com/"
             city_Name="London"
-            description="London, city, capital of the United Kingdom. It is among the oldest of the world's great cities—its history spanning nearly two millennia—and one of the most cosmopolitan. By far Britain's largest metropolis, it is also the country's economic, transportation, and cultural centre."
+            description="London, city, capital of the United Kingdom. It is among the oldest of the world's great cities—its history spanning nearly two millennia—and one of the most cosmopolitan. By far Britain's largest metropolis, it is also the country's economic, transportation, and cultural centre.London is famous for more than its ancient buildings."
           />
         </div>
         <Bookings />
