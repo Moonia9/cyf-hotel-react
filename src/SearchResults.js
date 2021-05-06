@@ -48,4 +48,5 @@ const SearchResults = () => {
 //   var b = moment(endDate);
 //   a.diff(b)
 // }
+
 export default SearchResults;
