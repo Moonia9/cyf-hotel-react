@@ -4,7 +4,7 @@ const Footer = properties => {
   return (
     <footer>
       <ul>
-        {properties.array.map((element, index) => {
+        {properties.arr.map((element, index) => {
           return <li key={index}>{element}</li>;
         })}
       </ul>
