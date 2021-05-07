@@ -13,7 +13,6 @@ const TouristInfoCards = properties => {
         <div className="card-body">
           <p>{properties.description}</p>
           <a
-            target="_blank"
             href={properties.url}
             className="btn btn-outline-secondary bg-light"
           >

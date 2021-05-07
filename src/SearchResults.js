@@ -1,18 +1,7 @@
 import React from "react";
+//import moment from "./moment"
 
-const SearchResults = () => {
-  const array = [
-    {
-      title: "Marabou Hotel",
-      firstName: "Maria",
-      lastName: "Pascal",
-      email: "example@email.com",
-      roomId: "1234",
-      checkInDate: "01/07/2021",
-      CheckOutDate: "15/07/2021",
-      id: "passport"
-    }
-  ];
+const SearchResults = properties => {
   return (
     <table className="table table-bordered">
       <thead>
@@ -26,19 +15,19 @@ const SearchResults = () => {
           <th scope="col">Check Out</th>
         </tr>
       </thead>
-      {array.map(element => (
-        <tbody>
-          <tr>
+      <tbody>
+        {properties.bookings.map(element => (
+          <tr key={element.id}>
             <td>{element.title}</td>
             <td>{element.firstName}</td>
             <td>{element.lastName}</td>
             <td>{element.email}</td>
             <td>{element.roomId}</td>
             <td>{element.checkInDate}</td>
-            <td>{element.CheckOutDate}</td>
+            <td>{element.checkOutDate}</td>
           </tr>
-        </tbody>
-      ))}
+        ))}
+      </tbody>
     </table>
   );
 };

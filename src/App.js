@@ -36,7 +36,6 @@ const App = () => {
         </div>
         <Bookings />
         <Restaurant />
-        <SearchResults />
         <Footer
           const
           arr={[
