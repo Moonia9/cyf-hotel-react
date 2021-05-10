@@ -29,3 +29,7 @@ body {
   object-fit: cover;
   height: 250px;
 }
+
+.active-row {
+  background-color: thistle;
+}

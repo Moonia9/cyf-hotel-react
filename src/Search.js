@@ -1,7 +1,15 @@
 import React from "react";
 import SearchButton from "./SearchButton";
 
-const Search = properties => {
+const Search = props => {
+  const onSearch = () => {
+    props.search(document.getElementById("customerName").value);
+  };
+
+  const customerName = () => {
+    //console.log(event.target.value);
+    console.log(document.getElementById("customerName").value);
+  };
   return (
     <div className="search">
       <div className="page-header">
@@ -9,18 +17,19 @@ const Search = properties => {
       </div>
       <div className="row search-wrapper">
         <div className="col">
-          <form className="form-group search-box">
-            <label htmlFor="customerName">Customer name</label>
-            <div className="search-row">
-              <input
-                type="text"
-                id="customerName"
-                className="form-control"
-                placeholder="Customer name"
-              />
-              <SearchButton onSearch={properties.search} />
-            </div>
-          </form>
+          {/* <form className="form-group search-box"> */}
+          <label htmlFor="customerName">Customer name</label>
+          <div className="search-row">
+            <input
+              type="text"
+              id="customerName"
+              className="form-control"
+              placeholder="Customer name"
+              onChange={customerName}
+            />
+            <SearchButton onSearch={onSearch} />
+          </div>
+          {/* </form> */}
         </div>
       </div>
     </div>

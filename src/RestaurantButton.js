@@ -1,9 +1,9 @@
 import React from "react";
 
-const RestaurantButton = properties => {
+const RestaurantButton = props => {
   return (
     <button
-      onClick={properties.onClick}
+      onClick={props.onClick}
       className="btn btn-outline-secondary bg-light mr-2"
     >
       Add Order

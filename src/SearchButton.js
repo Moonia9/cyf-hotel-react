@@ -1,10 +1,10 @@
 import React from "react";
 
-const SearchButton = properties => {
+const SearchButton = props => {
   return (
     <button
       className="btn btn-outline-secondary bg-light"
-      onClick={properties.onSearch}
+      onClick={props.onSearch}
     >
       Search
     </button>
