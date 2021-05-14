@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+//import CustomerProfile from "./CustomerProfile";
 //import moment from "./moment"
 
 const SearchResults = props => {
   const [activeRow, setActiveRow] = useState("");
 
   const highlight = () => {
-    if (activeRow == "") {
+    if (activeRow === "") {
       setActiveRow("active-row");
     } else {
       setActiveRow("");
@@ -13,6 +14,7 @@ const SearchResults = props => {
   };
   return (
     <table className="table table-bordered">
+      {/* <CustomerProfile /> */}
       <thead>
         <tr>
           <th scope="col">Hotel</th>
@@ -36,6 +38,11 @@ const SearchResults = props => {
             <td>{element.checkInDate}</td>
             <td>{element.checkOutDate}</td>
             <td>{getDays(element.checkInDate, element.checkOutDate)}</td>
+            <th scope="col">
+              <button className="btn btn-outline-secondary bg-light">
+                Show profile
+              </button>
+            </th>
           </tr>
         ))}
       </tbody>
@@ -47,7 +54,7 @@ function getDays(startDate, endDate) {
   const testStartDate = new Date(startDate);
   const testEndDate = new Date(endDate);
   const difference = testEndDate.getTime() - testStartDate.getTime();
-  console.log({ differenceinDays: difference / 1000 / 60 / 60 / 24 });
+  //console.log({ differenceinDays: difference / 1000 / 60 / 60 / 24 });
 
   return difference / 1000 / 60 / 60 / 24;
 

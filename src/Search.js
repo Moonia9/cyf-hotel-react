@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchButton from "./SearchButton";
 
 const Search = props => {
+  const [searchInput, setSearchInput] = useState("");
+  function handleSearchInput(event) {
+    console.log(event.target.value);
+    setSearchInput(event.target.value);
+  }
   const onSearch = () => {
     props.search(document.getElementById("customerName").value);
+  };
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    props.search(searchInput); //search={search} prop provided in Bookings.js
   };
 
   const customerName = () => {
@@ -17,19 +27,21 @@ const Search = props => {
       </div>
       <div className="row search-wrapper">
         <div className="col">
-          {/* <form className="form-group search-box"> */}
-          <label htmlFor="customerName">Customer name</label>
-          <div className="search-row">
-            <input
-              type="text"
-              id="customerName"
-              className="form-control"
-              placeholder="Customer name"
-              onChange={customerName}
-            />
-            <SearchButton onSearch={onSearch} />
-          </div>
-          {/* </form> */}
+          <form className="form-group search-box" onSubmit={handleSubmit}>
+            <label htmlFor="customerName">Customer name</label>
+            <div className="search-row">
+              <input
+                type="text"
+                id="customerName"
+                className="form-control"
+                placeholder="Customer name"
+                value={searchInput}
+                onChange={customerName}
+                onChange={handleSearchInput}
+              />
+              <SearchButton onSearch={onSearch} />
+            </div>
+          </form>
         </div>
       </div>
     </div>
