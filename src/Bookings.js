@@ -1,32 +1,31 @@
 //Bookings table - before adding hidden search bar - README.md exercise
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Search from "./Search.js";
 import SearchResults from "./SearchResults.js";
 //import FakeBookings from "./data/fakeBookings.json";
 
 const Bookings = () => {
-  //let results = [];
   const [bookings, setBookings] = useState([]);
-  useEffect(() => {
+
+  const search = searchVal => {
+    console.info("TO DO!", searchVal);
     fetch(`https://cyf-react.glitch.me`).then(response =>
       response
         .json()
         .then(data => {
           setBookings(data);
-          //console.log(data);
+          console.log(data);
         })
         .catch(error => {
           console.log(`There has been an error, ${error}`);
         }, [])
     );
-  });
+    const guests = bookings;
+    const filteredGuests = guests.filter(guest => {
+      return guest.firstName.toLowerCase() === searchVal.toLowerCase();
+    });
 
-  const search = searchVal => {
-    console.info("TO DO!", searchVal);
-    //if(searchVal)
-    //results = FakeBookings;
-
-    setBookings(bookings);
+    setBookings(filteredGuests);
   };
 
   return (

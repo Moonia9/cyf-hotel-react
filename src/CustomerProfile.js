@@ -1,12 +1,11 @@
-// import React, { useState, useEffect } from "react";
+// import React from "react";
 
 // const CustomerProfile = (props) => {
-
-// let personalInfo = {
-//   id: "",
-//   firstName : "",
-//   surname : ""
-// }
+//   let personalInfo = {
+//     id: "",
+//     firstName : "",
+//     surname
+//   }
 // };
 
 // const [personalInfoUser, setPersonalInfoUser] = useState(personalInfo);

@@ -4,7 +4,7 @@ import SearchButton from "./SearchButton";
 const Search = props => {
   const [searchInput, setSearchInput] = useState("");
   function handleSearchInput(event) {
-    console.log(event.target.value);
+    //console.log(event.target.value);
     setSearchInput(event.target.value);
   }
   const onSearch = () => {
@@ -16,7 +16,7 @@ const Search = props => {
     props.search(searchInput); //search={search} prop provided in Bookings.js
   };
 
-  const customerName = () => {
+  const customerName = onShowProfile => {
     //console.log(event.target.value);
     console.log(document.getElementById("customerName").value);
   };

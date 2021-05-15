@@ -4,6 +4,7 @@ import React, { useState } from "react";
 
 const SearchResults = props => {
   const [activeRow, setActiveRow] = useState("");
+  const [customerId, setCustomerId] = useState(null);
 
   const highlight = () => {
     if (activeRow === "") {
@@ -12,9 +13,18 @@ const SearchResults = props => {
       setActiveRow("");
     }
   };
+
+  const onShowProfile = customerId => {
+    console.log("Show profile");
+    console.log(customerId);
+    setCustomerId(customerId);
+  };
+
+  const onClickProfileButton = () => {
+    onShowProfile(props.id);
+  };
   return (
     <table className="table table-bordered">
-      {/* <CustomerProfile /> */}
       <thead>
         <tr>
           <th scope="col">Hotel</th>
@@ -39,13 +49,17 @@ const SearchResults = props => {
             <td>{element.checkOutDate}</td>
             <td>{getDays(element.checkInDate, element.checkOutDate)}</td>
             <th scope="col">
-              <button className="btn btn-outline-secondary bg-light">
+              <button
+                className="btn btn-outline-secondary bg-light"
+                onClick={onClickProfileButton}
+              >
                 Show profile
               </button>
             </th>
           </tr>
         ))}
       </tbody>
+      {/* <CustomerProfile customerId={}/> */}
     </table>
   );
 };
