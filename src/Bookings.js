@@ -12,20 +12,18 @@ const Bookings = () => {
     fetch(`https://cyf-react.glitch.me`).then(response =>
       response
         .json()
-        .then(data => {
-          setBookings(data);
-          console.log(data);
+        .then(bookings => {
+          const guests = bookings;
+          const filteredGuests = guests.filter(guest => {
+            return guest.firstName.toLowerCase() === searchVal.toLowerCase();
+          });
+
+          setBookings(filteredGuests);
         })
         .catch(error => {
           console.log(`There has been an error, ${error}`);
         }, [])
     );
-    const guests = bookings;
-    const filteredGuests = guests.filter(guest => {
-      return guest.firstName.toLowerCase() === searchVal.toLowerCase();
-    });
-
-    setBookings(filteredGuests);
   };
 
   return (

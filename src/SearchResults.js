@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Customer from "./Customer";
 //import CustomerProfile from "./CustomerProfile";
 //import moment from "./moment"
 
